@@ -1,0 +1,44 @@
+@use "/src/styles/variables.module.scss" as variables;
+
+$sectionMargin: 2rem;
+
+.section-container {
+  // width: calc(100% - $sectionMargin * 2);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 2rem 0;
+  align-self: center;
+  justify-self: center;
+
+  @media screen and (min-width: 768px) {
+    margin: 2rem 5rem;
+    max-width: 1200px;
+  }
+
+  &.has-title {
+    padding-top: 0rem;
+  }
+
+  .title {
+    text-align: center;
+    width: 100%;
+    background-color: variables.$card-color;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
